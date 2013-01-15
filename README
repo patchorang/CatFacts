@@ -1,0 +1,13 @@
+Better inform you friends about cats. Use your Google Voice number to send periodic cat facts.
+
+https://github.com/korylprince/pygvoicelib is required
+clone from: git@github.com:korylprince/pygvoicelib.git
+Requires some setup through google, view the README for pygvoicelib for more info.
+
+Usage:
+from catfacts import CatFacts
+cat_facts = CatFacts(facts, username, apppass, auth_token, rnr_se, phone_number, minutes_per_text)
+cat_facts.goFacts();
+
+default catfact speed is one fact every hour
+
