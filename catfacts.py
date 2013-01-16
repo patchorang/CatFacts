@@ -213,10 +213,7 @@ The richest cat is Blackie who was left $20 million by his owner, Ben Rea.
 The claws on the cat's back paws aren't as sharp as the claws on the front paws because the claws in the back don't retract and, consequently, become worn.""".split("\n\n")
 		self.phone_number = number;
 		self.minutes_per_fact = minutes_per_text;
-		self.client = pygvoicelib.GoogleVoice(username,
-										apppass,
-										auth_token,
-										rnr_se)
+		self.client = pygvoicelib.GoogleVoice(username, apppass, auth_token, rnr_se)
 	
 	def getRandomCatFact(self):
 		return self.fact_list[randrange(len(self.fact_list))]
