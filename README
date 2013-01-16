@@ -9,5 +9,5 @@ from catfacts import CatFacts
 cat_facts = CatFacts(username, apppass, auth_token, rnr_se, phone_number, minutes_per_text)
 cat_facts.goFacts();
 
-default catfact speed is one fact every hour
+Default catfact speed is one fact every hour. I am not sure what the SMS limits are, but they do exist.
 
