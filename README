@@ -4,6 +4,8 @@ https://github.com/korylprince/pygvoicelib is required
 clone from: git@github.com:korylprince/pygvoicelib.git
 Requires some setup through google, view the README for pygvoicelib for more info.
 
+In catfacts.py set /Path/To/meow.wav to the path on your machine.
+
 Usage:
 from catfacts import CatFacts
 cat_facts = CatFacts(username, apppass, auth_token, rnr_se, phone_number, minutes_per_text, audio_alerts)

@@ -230,6 +230,6 @@ The claws on the cat's back paws aren't as sharp as the claws on the front paws 
 				message = self.getRandomPromo() + " " + message	
 			print "sending: " + message 
 			if(self.audio_alert):
-				subprocess.call(["afplay", "/Users/adammenz/Developer/CatFacts/meow.wav"])
+				subprocess.call(["afplay", "/Path/To/meow.wav"])
 			self.client.sms(self.phone_number, message)
 			sleep(self.minutes_per_fact * 60)
