@@ -1,10 +1,11 @@
+import subprocess
 import pygvoicelib
 from random import randrange, randint
 from time import sleep
 
 class CatFacts:
 	
-	def __init__(self, username, apppass, auth_token, rnr_se, number, minutes_per_text = 60):
+	def __init__(self, username, apppass, auth_token, rnr_se, number, minutes_per_text = 60, audio_alert = False):
 		self.promotional_messages = [
 			"Thank you for subscribing to CatFacts!",
 			"CatFacts is your number one source for CatFacts in the world!",
@@ -214,6 +215,7 @@ The claws on the cat's back paws aren't as sharp as the claws on the front paws 
 		self.phone_number = number;
 		self.minutes_per_fact = minutes_per_text;
 		self.client = pygvoicelib.GoogleVoice(username, apppass, auth_token, rnr_se)
+		self.audio_alert = audio_alert
 	
 	def getRandomCatFact(self):
 		return self.fact_list[randrange(len(self.fact_list))]
@@ -226,5 +228,8 @@ The claws on the cat's back paws aren't as sharp as the claws on the front paws 
 			message = self.getRandomCatFact()
 			if(randint(0, 3) == 1):
 				message = self.getRandomPromo() + " " + message	
+			print "sending: " + message 
+			if(self.audio_alert):
+				subprocess.call(["afplay", "/Users/adammenz/Developer/CatFacts/meow.wav"])
 			self.client.sms(self.phone_number, message)
 			sleep(self.minutes_per_fact * 60)

@@ -6,8 +6,14 @@ Requires some setup through google, view the README for pygvoicelib for more inf
 
 Usage:
 from catfacts import CatFacts
-cat_facts = CatFacts(username, apppass, auth_token, rnr_se, phone_number, minutes_per_text)
+cat_facts = CatFacts(username, apppass, auth_token, rnr_se, phone_number, minutes_per_text, audio_alerts)
 cat_facts.goFacts();
 
 Default catfact speed is one fact every hour. I am not sure what the SMS limits are, but they do exist.
 
+Audio sample from http://www.freesound.org/people/tekgnosis/sounds/144691/
+
+License 
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+http://www.gnu.org/licenses/gpl.html
